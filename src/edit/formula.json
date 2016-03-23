@@ -1,0 +1,28 @@
+{
+  "fieldsets": [{
+    "fields": [{
+        "id": "id",
+        "disabled": true
+      },
+      "code",
+      "bundle",
+      "texts",
+      {
+        "id": "created_by",
+        "disabled": true
+      },
+      {
+        "id": "created",
+        "disabled": true
+      },
+      {
+        "id": "updated_by",
+        "disabled": true
+      },
+      {
+        "id": "created",
+        "disabled": true
+      }
+    ]
+  }]
+}
