@@ -5,7 +5,9 @@ var router = function($routeProvider, $locationProvider) {
 
   $locationProvider.html5Mode(true).hashPrefix('!');
 
-  $routeProvider.when('/:id', {
+  $routeProvider.when('/:id/edit', {
+    redirectTo: '/:id'
+  }).when('/:id', {
     template: '<npdc:formula></npdc:formula>',
     controller: 'TextEditController'
   }).when('/', {
