@@ -2,7 +2,8 @@
   "fieldsets": [{
     "fields": [{
         "id": "id",
-        "disabled": true
+        "disabled": true,
+        "hidden": true
       },
       "code",
       "bundle",

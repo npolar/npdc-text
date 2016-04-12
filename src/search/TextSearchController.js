@@ -1,6 +1,6 @@
 'use strict';
 
-var TextSearchController = function($scope, $controller, TextResource) {
+function TextSearchController($scope, $controller, TextResource) {
   'ngInject';
 
   $controller('NpolarBaseController', {
@@ -15,13 +15,13 @@ var TextSearchController = function($scope, $controller, TextResource) {
   };
 
   let query = function() {
-    let defaults = {
-      limit: "50",
+    return {
+      limit: 50,
+      'size-facet':1000,
       fields: 'id,texts,bundle,code,updated,created,updated_by,created_by',
-      facets: "bundle,texts.@language",
+      facets: "code,bundle,texts.@language",
       score: true
     };
-    return Object.assign({}, defaults);
   };
 
   $scope.search(query());
@@ -29,6 +29,6 @@ var TextSearchController = function($scope, $controller, TextResource) {
   $scope.$on('$locationChangeSuccess', (event, data) => {
     $scope.search(query());
   });
-};
+}
 
 module.exports = TextSearchController;

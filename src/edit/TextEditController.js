@@ -20,7 +20,7 @@ var TextEditController = function($scope, $controller, TextResource, formula, fo
   };
 
   $scope.formula = formula.getInstance(formulaOptions);
-  formulaAutoCompleteService.autocompleteFacets(['bundle', 'texts.@language'], TextResource, $scope.formula);
+  formulaAutoCompleteService.autocompleteFacets(['code', 'bundle', 'texts.@language'], TextResource, $scope.formula);
 
   $scope.edit();
 };
